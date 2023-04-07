@@ -1,0 +1,6 @@
+case "$1" in
+# allow one-off tests by pushing to "for-ci" or "for-ci/mybranch"
+refs/heads/for-ci*) true ;;
+# don't build any other branches or tags
+*) false ;;
+esac
